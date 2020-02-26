@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Weather App</title>
+        <link rel="stylesheet" type="text/css" href="../public/css/mystyle.css">
+    </head>
+    <body> 
+        <div class="container">
+            <fieldset>
+                <form action="/" method="post" >
+                    <input name="city" type="text" class="ghost-input" placeholder="Enter a city" required >
+                    <input type="submit" class="ghost-button" value="Get Weather">
+                </form>
+                <% if(weather !== null){ %>
+                    <p style="color:blue"><%= weather %></p>
+                <% } %>
+          
+                <% if(error !== null){ %>
+                    <p><%= error %></p>
+                <% } %>
+            </fieldset>
+        </div>
+    </body>
+</html>
